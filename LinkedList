@@ -1,0 +1,35 @@
+
+
+
+class Node{
+  var next:Node=null
+  var value:Int=0
+  
+  def this(x:Int)
+  {
+    this
+    this.next=null
+    this.value=x
+  }
+}
+
+class ListDemo {
+  
+  def display(y:Node){
+    var x=y
+   while(x.value!=0)
+   {
+     println(x.value)
+     x=x.next
+   }
+  }
+  
+  def main(args:Array[String])
+  {
+    val root:Node=new Node(2)
+    root.next=new Node(3)
+    root.next.next=new Node(5)
+     display(root)
+  }
+  
+}
