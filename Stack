@@ -1,43 +1,82 @@
-package com.zebra.store
+import sun.misc.GC
 
-class Node1{
-  
-  var next:Node1=null
+
+class NodeStack
+{
+  var next:NodeStack=null
   var value:Int=0
   
   def this(x:Int)
   {
     this
+    this.next=null
     this.value=x
+  }
+  
+  def push(x:Int,y:NodeStack)
+  {
+    
   }
 }
 
-class StackDemo {
+object StackTest {
   
-  var top:Node1=null
-  
-  def push(top1:Node1,x:Int)={
+  def push(top:NodeStack,y:Int,head:NodeStack)=
+  {
+    var p=top
     
-    var top=top1
-    if(top.value==0)
-    {
-     top.value=x
     
+    
+    var z=new NodeStack(y)
+
+      p.next=z
+      p=z
+     (p,head)
   }
+  
+  def pop(top:NodeStack,head:NodeStack)=
+  {
     
-    else
+    var x=head
+    while(x.next!=top)
     {
-      while(top.next!=null)
-      {
-        top=top.next
-      }
-      
-      top.value=x
+      x=x.next
+    }
+    
+    x.next=null
+    (x,head)
+  }
+  
+  def display(y:NodeStack)
+  {
+    var x=y
+    
+    while(x!=null)
+    {
+      println(x.value)
+      x=x.next
     }
   }
   
-  def pop(x:Int)={
+  def main(args:Array[String])
+  {
+    GC.currentLatencyTarget()
+    var head=new NodeStack(2)
+    var top=head
+   var x=(top,head)
+    x=push(x._1,3,head)
+    x=push(x._1,5,head)
+    x=push(x._1,7,head)
+    x=push(x._1,9,head)
+    x=push(x._1,11,head)
+    x=push(x._1,18,head)
     
+    x=pop(x._1,x._2)
+    x=pop(x._1,x._2)
+    
+    display(x._2)
+    
+    println("top="+x._1.value+"head="+x._2.value)
   }
   
 }
