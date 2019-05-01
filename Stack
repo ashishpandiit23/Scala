@@ -1,0 +1,43 @@
+package com.zebra.store
+
+class Node1{
+  
+  var next:Node1=null
+  var value:Int=0
+  
+  def this(x:Int)
+  {
+    this
+    this.value=x
+  }
+}
+
+class StackDemo {
+  
+  var top:Node1=null
+  
+  def push(top1:Node1,x:Int)={
+    
+    var top=top1
+    if(top.value==0)
+    {
+     top.value=x
+    
+  }
+    
+    else
+    {
+      while(top.next!=null)
+      {
+        top=top.next
+      }
+      
+      top.value=x
+    }
+  }
+  
+  def pop(x:Int)={
+    
+  }
+  
+}
