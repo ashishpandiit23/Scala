@@ -1,5 +1,15 @@
 //problem 1
 
+/*1. Write a function to receive string and return it as Json string. 
+You can use constant header(key) value for json key. Write test cases to prove function is working as expected. 
+
+Input 
+Ganit, Shiva, Welcome to the team Google, Sundar, Welcome to the search 
+Output: (for first input) { 
+Company: Ganit CEO: Shiva Greetings: Welcome to the team } Note: Do not use for loop to convey from csv string to json string. 
+
+*/
+
 import scala.util.parsing.json.JSONObject
 
 
