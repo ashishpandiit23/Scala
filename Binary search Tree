@@ -113,10 +113,14 @@ object TreeTest {
  // println(root.value)
     root=insert(root,4)._1
     
-     root=insert(root,1)._1
+     root=insert(root,2)._1
      root=insert(root,7)._1
      //println("root final="+root.value)
-     root=insert(root,2)._1
+     root=insert(root,1)._1
+     root=insert(root,11)._1
+     root=insert(root,39)._1
+     root=insert(root,-1)._1
+     root=insert(root,-2)._1
    
      
   
