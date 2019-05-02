@@ -1,4 +1,13 @@
 // problem 2
+/*
+2. Write a function to receive string and return a string. 
+String should be manipulated as first character and last character combination till the length/2
+Input: 
+123456 Output: 162534 
+Input: 
+12345 Output: 
+15243 
+*/
 
 
 object Test2 {
