@@ -31,7 +31,7 @@ object FirstRepeatchar {
    var c=new Array[List[Any]](256)
    
   var b= Array.fill(256)(List(0))
-println(b.length)
+//println(b.length)
    for(i<-0 to a.length-1)
    {
 
@@ -41,6 +41,7 @@ println(b.length)
      
    }
     
+    // breakable section is used if we are using break statement in this section, it will not throw exception when break condition occurs
  breakable{   for(i<-0 to a.length-1)
    {
      
