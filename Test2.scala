@@ -10,7 +10,7 @@ Input:
 */
 
 
-object Test2 {
+object Test22 {
   
   def input(x:String):String={
     var p=x.toArray

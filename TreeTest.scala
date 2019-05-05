@@ -3,10 +3,10 @@ import scala.util.control.Breaks
 //import scala.reflect.internal.Trees.Return
 
 
-class NodeTree
+class NodeTreeTest
 {
-  var left:NodeTree=null
-  var right:NodeTree=null
+  var left:NodeTreeTest=null
+  var right:NodeTreeTest=null
   var value:Int=0
   
   def this(x:Int)
@@ -20,13 +20,13 @@ class NodeTree
   
 }
 
-object TreeTest {
+object TreeTest1 {
   
-  def insert(root:NodeTree,value:Int)=
+  def insert(root:NodeTreeTest,value:Int)=
   {
     
-    var n:NodeTree=root
-    var Nod=new NodeTree(value)
+    var n:NodeTreeTest=root
+    var Nod=new NodeTreeTest(value)
     if(root==null)
     {
       
@@ -84,7 +84,7 @@ object TreeTest {
     }
   }
   
-  def display(root:NodeTree)
+  def display(root:NodeTreeTest)
   {
     var n=root
     
@@ -108,7 +108,7 @@ object TreeTest {
   def main(args:Array[String]):Unit={
  
     GC.currentLatencyTarget()
-    var root:NodeTree=null
+    var root:NodeTreeTest=null
      root=insert(root,3)._1
  // println(root.value)
     root=insert(root,4)._1

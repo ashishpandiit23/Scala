@@ -2,7 +2,7 @@ import org.omg.CORBA.FREE_MEM
 import sun.misc.GC
 
 
-class NodeList
+class NodeListTest
 {
   var value:Int=0
   var next:NodeList=null
@@ -25,7 +25,7 @@ class NodeList
   }
 }
 
-object ListTest {
+object ListTest1 {
   
   def display(p:NodeList)
   {

@@ -13,7 +13,7 @@ Company: Ganit CEO: Shiva Greetings: Welcome to the team } Note: Do not use for 
 import scala.util.parsing.json.JSONObject
 
 
-object Demo {
+object JsonString {
   
   // defining case class according to the schema of the data
   case class Emp(cname:String,designation:String,Greeting:String,name:String)
