@@ -1,5 +1,7 @@
 import sun.misc.GC
 import scala.util.control.Breaks
+
+
 //import scala.reflect.internal.Trees.Return
 
 
@@ -105,6 +107,62 @@ object TreeTest {
     }
   }
   
+  
+  def maxNode(x:NodeTree):Int={
+    
+    var y=x
+    if(y==null)
+      1
+    else
+    {
+      while(y.right!=null)
+      {
+       y=y.right 
+      }
+    }
+    y.value
+  }
+  
+  
+  def minNode(x:NodeTree):Int={
+    
+    var y=x
+    if(y==null)
+      1
+    else
+    {
+      while(y.left!=null)
+      {
+        
+      y=y.left
+      }
+      
+    }
+    
+    y.value
+  }
+  
+  def sumofAllNode(y:NodeTree):Int={
+    
+    var x=y
+    var r=x.value
+    
+    while(x.left!=null)
+    {
+      r=r+x.value
+      x=x.left
+    }
+    
+    //println("left tree sum="+r)
+    var p=y
+    while(p.right!=null)
+    {
+      r=r+p.value
+      p=p.right
+    }
+    
+    r
+  }
   def main(args:Array[String]):Unit={
  
     GC.currentLatencyTarget()
@@ -125,6 +183,10 @@ object TreeTest {
      
   
   display(root)
+    
+    println(sumofAllNode(root))
+    
+    println("minnode="+minNode(root))
     }
   
 }
